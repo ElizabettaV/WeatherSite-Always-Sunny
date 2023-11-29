@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="title" content="Календарь погоды">
+    <meta name="keywords=" content="прогноз, Гродно">
+    <meta name="author" content="Vyshnikova Elizabetta">
+    <meta name="description=" content="Главная страница календаря погоды">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="index.css" rel="stylesheet">
+    <title>Main page</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <img width="100" height="100" src="https://img.icons8.com/clouds/100/calendar--v2.png" alt="image calendar"/>
+        <h1>Календарь погоды</h1> <!-- заголовок страницы-->
+                
+        <nav class="menu"> <!--навигация-->
+            <ul class="menu_list"> 
+                <a href="index.html" class="menu_link" >Главная</a>
+                <a href="map.html" class="menu_link">Карта</a>       <!--интерактивная карта мира-->
+                <a style="float: right" href="#search" class="menu_link">Поиск</a>
+                <a style="float: right" href="#settings" class="menu_link">Настройки</a>
+            </ul> 
+        </nav>
+    </header>
+
+    <main>
+        <article class="article">  <!--информер для текущего местоположения-->
+            <section id="stats">
+              <div class="summary">
+                <h2>Сводка погоды</h2>
+                <h3 id="city"></h3>
+                <p>Currently: <span id="current-desc"></span></p>
+                <p>Температура:<span id="current-temp"></span>°С</p>
+                <p>Ощущается как: <span id="current-windChill"></span>°C</p>
+                <p>Влажность: <span id="current-humid"></span>%</p>
+                <p>Скорость ветра: <span id="current-windSpeed"></span>м/с</p>
+              </div>
+            </section>
+    
+            <div>
+              <img src="https://unsplash.com/photos/a-body-of-water-surrounded-by-trees-covered-in-snow-iXKkFEEvCxI" alt=" weather image" />            </div>
+         
+
+        </article>
+        
+            <div class="article-five-day"> <!--Прогноз погоды на ближайшие 5 дней-->
+                <article id="forecastContainer">
+                  <h2 id="forecastTitle">Погода на 5 дней</h2>
+                  <h3 id="city">Grodno</h3>
+                  <div class="flex">
+                    <div class="flex-col">
+                      <span id="dayTitle1" class="col-head"></span>
+                      <img
+                        src="./images/partlyCloudy.jpg"
+                        id="weatherIcon1"
+                        class="weatherIcon"
+                      />
+                      <span class="temp-data">
+                        <span id="data1"></span>
+                        <span>Понедельник<br />80°F</span>
+                      </span>
+                    </div>
+                    <div class="flex-col">
+                      <span id="dayTitle2" class="col-head"></span>
+                      <img
+                        src="./images/partlyCloudy.jpg"
+                        id="weatherIcon2"
+                        class="weatherIcon"
+                      />
+                      <div class="temp-data">
+                        <span id="data2"></span>
+                        <span>Day 2<br />82°F</span>
+                      </div>
+                    </div>
+                    <div class="flex-col">
+                      <span id="dayTitle3" class="col-head"></span>
+                      <img
+                        src="./images/partlyCloudy.jpg"
+                        id="weatherIcon3"
+                        class="weatherIcon"
+                      />
+                      <div class="temp-data">
+                        <span id="data3"></span>
+                        <span>Day 3<br />74°F</span>
+                      </div>
+                    </div>
+                    <div class="flex-col">
+                      <span id="dayTitle4" class="col-head"></span>
+                      <img
+                        src="./images/Umbrella.jpg"
+                        id="weatherIcon4"
+                        class="weatherIcon"
+                      />
+                      <div class="temp-data">
+                        <span id="data4"></span>
+                        <span>Day 4<br />61°F</span>
+                      </div>
+                    </div>
+                    <div class="flex-col">
+                      <span id="dayTitle5" class="col-head"></span>
+                      <img
+                        src="./images/Sunny.jpg"
+                        id="weatherIcon5"
+                        class="weatherIcon"
+                      />
+                      <div class="temp-data">
+                        <span id="data5"></span>
+                        <span>Day 5<br />68°F</span>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+        </article> 
+    <article> <!--Выбор города, для просмотра календаря-->
+
+    </article>
+    
+
+    </main>
+
+    <footer>
+        <ul class="bottom_menu"> 
+            <a href="#rules" class="bottom_menu_link">Пользовательское соглашение</a>       
+            <a href="contact.html" class="bottom_menu_link">Обратная связь</a><br>
+            <h3>Создатель проекта - Вышникова Элизабетта</h3>
+        </ul> 
+    </footer>
+
+<script src="weather_header.js"></script>  
+</body>
+</html>
+

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="title" content="Форма регистрации">
+    <meta name="keywords=" content="погода, Гродно">
+    <meta name="author" content="Vyshnikova Elizabetta">
+    <meta name="description=" content="Форма регистрации для календаря погоды ">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="registration.css" rel="stylesheet">
+    <title>Registration</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+</head>
+
+<body>
+    <header>
+        <img width="100px" height="100px" src="https://img.icons8.com/clouds/100/calendar--v2.png" alt="calendar"/>
+        <h1>Календарь погоды</h1> <!-- заголовок страницы-->
+                
+        <nav class="menu"> <!--навигация-->
+            <ul class="menu_list"> 
+                <a href="index.html" class="menu_link" >Главная</a>
+                <a href="map.html" class="menu_link">Карта</a>       
+                <a style="float: right" href="#search" class="menu_link">Поиск</a>
+                <a style="float: right" href="#settings" class="menu_link">Настройки</a>
+            </ul> 
+        </nav>
+    </header>
+    <form action="" method="POST">
+        <fieldset>
+            <legend>Регистрация</legend>
+            <label for="fname">Имя</label>
+            <input type="text" id="fname" name="fname" required> <br>
+            <label for="surname">Фамилия</label>
+            <input type="text" id="surname" name="surname" required> <br>
+            <label for="patr">Отчество</label>
+            <input type="text" id="patr" name="patr" required> <br>
+            <label for="age">Возраст</label>
+            <input type="number" id="age" name="age" required> <br>
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="E-mail" required> <br>
+            <label for="pass">Придумайте пароль</label>
+            <input type="password" id="pass" name="pass" required> <br>
+            <label for="pass">Повторите пароль</label>                  <!--добавить сравнение паролей-->
+            <input type="password" id="retry_pass" name="retyr_pass" required> <br>
+            <input type="submit" value="Continue">
+        </fieldset>
+        
+    </form>
+    <footer>
+        <ul class="bottom_menu"> 
+            <a href="#rules" class="bottom_menu_link">Пользовательское соглашение</a>       
+            <a href="contact.html" class="bottom_menu_link">Обратная связь</a><br>
+            <h3>Создатель проекта - Вышникова Элизабетта</h3>
+        </ul> 
+    </footer>
+<script>
+
+</script>
+
+</body>
+</html>
+

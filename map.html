@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="title" content="Календарь погоды">
+    <meta name="keywords=" content="погода, Гродно">
+    <meta name="author" content="Vyshnikova Elizabetta">
+    <meta name="description=" content="Интерактивная карта погоды">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="map.css" rel="stylesheet">
+    <title>Map</title>
+</head>
+
+<body>
+    <header>
+        <img src="https://img.icons8.com/clouds/100/calendar--v2.png" alt="calendar"/>
+        <h1>Календарь погоды</h1> <!--заголовок страницы-->
+                
+        <nav class="menu"> <!--навигация-->
+            <ul class="menu_list"> 
+                <a href="index.html" class="menu_link">Главная</a>
+                <a href="map.html" class="menu_link">Карта</a>       
+                <a style="float: right" href="#search" class="menu_link">Поиск</a>
+                <a style="float: right" href="#settings" class="menu_link">Настройки</a>
+            </ul> 
+        </nav>
+    </header>
+    <article>   <!--Карта региона-->
+        <h3>Интерактивная карта погоды</h3>
+        <iframe scrolling="no" frameBorder="0" src="https://pogoda.turtella.ru/i/ahe7g/map/#weather,,27.773437500000004,53.48992504981108,6">
+        </iframe>
+    </article>
+    <footer>
+        <ul class="bottom_menu"> 
+            <a href="#rules" class="bottom_menu_link">Пользовательское соглашение</a>       
+            <a href="contact.html" class="bottom_menu_link">Обратная связь</a><br>
+            <h3>Создатель проекта - Вышникова Элизабетта</h3>
+        </ul> 
+    </footer>
+</body>
