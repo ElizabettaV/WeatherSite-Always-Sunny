@@ -1,6 +1,5 @@
 * {
-    box-sizing: border-box;
-    min-width: 510px;
+  min-width: 510px;
 }
 ul {
     list-style-type: none;

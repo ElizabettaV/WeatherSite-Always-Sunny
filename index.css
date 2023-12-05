@@ -1,5 +1,4 @@
 * {
-    box-sizing: border-box;
     min-width: 510px;
 }
 ul {
@@ -12,7 +11,7 @@ ul {
   
 a {
     float: left;
-    display: block;
+    display: flexbox;
     color: white;
     text-align: center;
     padding: 14px 16px;

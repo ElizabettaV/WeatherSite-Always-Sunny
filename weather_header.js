@@ -15,7 +15,7 @@ fetch(URL)
     document.getElementById("current-windSpeed").textContent =
       jsObject.wind.speed;
 
-    // handles the wind chill factor
+    // "ощущается как"
     let T = (document.getElementById("current-temp").textContent = Math.floor(
       jsObject.main.temp
     ));

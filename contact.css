@@ -1,5 +1,4 @@
 * {
-    box-sizing: border-box;
     min-width: 510px;
 }
 ul {
@@ -17,6 +16,11 @@ a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+  }
+  a.link
+  {
+   color:blue;
+
   }
   
 a:hover {
