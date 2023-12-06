@@ -16,7 +16,7 @@
 <body>
 
     <header>
-        <img width="100" height="100" src="./images/calendar.png" alt="image calendar"/>
+        <img width="50" height="50" src="./images/calendar.png" alt="image calendar"/>
         <h1>Календарь погоды</h1> <!-- заголовок страницы-->
                 
         <nav class="menu"> <!--навигация-->
@@ -30,22 +30,24 @@
     </header>
 
     <main>
-        <article class="article">  <!--информер для текущего местоположения-->
-            <section id="stats">
-              <div class="summary">
-                <h2>Сводка погоды</h2>
-                <h3 id="city"></h3>
-                <p>Температура:<span id="current-temp"></span>°С</p>
-                <p>Ощущается как:<span id="current-windChill"></span>°C</p>
-                <p>Влажность:<span id="current-humid"></span>%</p>
-                <p>Скорость ветра:<span id="current-windSpeed"></span>м/с</p>
-              </div>
-            </section>
-    
-            <div>
-              <img src="https://unsplash.com/photos/a-body-of-water-surrounded-by-trees-covered-in-snow-iXKkFEEvCxI" alt=" weather image" />            </div>
-         
+        <article class="weather__info none">
+          <img src="./images/sunny.png" alt="Weather" class="weather__img">
+          <div class="weather__temp">22°c</div>
+          <div class="weather__city">New York</div>
+        </article>
 
+      <article class="weather__details none">
+          <section class="details">
+              <img src="./images/humidity.png" alt="" class="details__img">
+              <div class="details__value" id="humidity">50%</div>
+              <div class="details__title">Humidity</div>
+          </article>
+
+          <article class="details">
+              <img src="./images/wind_speed.png" alt="" class="details__img">
+              <div class="details__value" id="speed">10 km/h</div>
+              <div class="details__title">Wind Speed</div>
+          </section>
         </article>
         
             <div class="article-five-day"> <!--Прогноз погоды на ближайшие 5 дней-->
@@ -115,13 +117,11 @@
                     </div>
                   </div>
                 </article>
-              </div>
+              </div>  
         </article> 
-    <article> <!--Выбор города, для просмотра календаря-->
+    <article> <!--Галерея изображений-->
 
     </article>
-    
-
     </main>
 
     <footer>

@@ -1,4 +1,4 @@
-* {
+@import './reset.css';* {
   min-width: 510px;
 }
 ul {
