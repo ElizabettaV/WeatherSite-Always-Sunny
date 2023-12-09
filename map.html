@@ -13,19 +13,18 @@
 </head>
 
 <body>
-    <header>
-        <img src="./images/calendar.png" alt="calendar"/>
-        <h1>Календарь погоды</h1> <!--заголовок страницы-->
-                
+    <header class="header">
+        <img class="logo" src="./images/calendar.png" alt="image calendar" />
+        <h1>Календарь погоды</h1> <!-- заголовок страницы-->
+    
         <nav class="menu"> <!--навигация-->
-            <ul class="menu_list"> 
-                <a href="index.html" class="menu_link">Главная</a>
-                <a href="map.html" class="menu_link">Карта</a>       
-                <a style="float: right" href="#settings" class="menu_link">Настройки</a>
-                <a style="float: right" href="login_form.html" class="menu_link">Вход/Регистрация</a>
-            </ul> 
+          <ul class="menu_list">
+            <a href="index.html" class="menu_link">Главная</a>
+            <a href="map.html" class="menu_link">Карта</a> <!--интерактивная карта мира-->
+            <a style="float: right" href="login_form.html" class="menu_link">Вход/Регистрация</a>
+          </ul>
         </nav>
-    </header>
+      </header>
     <article>   <!--Карта региона-->
         <h3>Интерактивная карта погоды</h3>
         <iframe scrolling="no" frameBorder="0" src="https://pogoda.turtella.ru/i/ahe7g/map/#weather,,27.773437500000004,53.48992504981108,6">

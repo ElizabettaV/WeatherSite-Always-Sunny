@@ -2,137 +2,149 @@
 <html lang="ru">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="title" content="Календарь погоды">
-    <meta name="keywords=" content="прогноз, Гродно">
-    <meta name="author" content="Vyshnikova Elizabetta">
-    <meta name="description=" content="Главная страница календаря погоды">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="index.css" rel="stylesheet">
-    <title>Main page</title>
-    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <meta charset="utf-8">
+  <meta name="title" content="Календарь погоды">
+  <meta name="keywords=" content="прогноз, Гродно">
+  <meta name="author" content="Vyshnikova Elizabetta">
+  <meta name="description=" content="Главная страница календаря погоды">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="index.css" rel="stylesheet">
+  <title>Main page</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 </head>
 
 <body>
 
-    <header>
-        <img width="50" height="50" src="./images/calendar.png" alt="image calendar"/>
-        <h1>Календарь погоды</h1> <!-- заголовок страницы-->
-                
-        <nav class="menu"> <!--навигация-->
-            <ul class="menu_list"> 
-                <a href="index.html" class="menu_link" >Главная</a>
-                <a href="map.html" class="menu_link">Карта</a>       <!--интерактивная карта мира-->
-                <a style="float: right" href="#settings" class="menu_link">Настройки</a>
-                <a style="float: right" href="login_form.html" class="menu_link">Вход/Регистрация</a>
-            </ul> 
-        </nav>
-    </header>
+  <header class="header">
+    <img class="logo" src="./images/calendar.png" alt="image calendar" />
+    <h1 class="logo_name">Календарь погоды</h1> <!-- заголовок страницы-->
 
-    <main>
-        <article class="weather__info none">
-          <img src="./images/sunny.png" alt="Weather" class="weather__img">
-          <div class="weather__temp">22°c</div>
-          <div class="weather__city">New York</div>
+    <nav class="menu"> <!--навигация-->
+      <ul class="menu_list">
+        <a href="index.html" class="menu_link">Главная</a>
+        <a href="map.html" class="menu_link">Карта</a> <!--интерактивная карта мира-->
+        <a style="float: right" href="login_form.html" class="menu_link">Вход/Регистрация</a>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <article class="weather"> <!--Прогноз погоды в городе-->
+
+      <article class="weather__info">
+        <img src="./images/sunny.png" alt="Weather" class="weather__img">
+        <div class="weather__temp">22°С</div>
+        <div class="weather__city">Grodno</div>
+      </article>
+
+      <article class="weather__details">
+        <section class="details">
+          <img src="./images/humidity.png" alt="Humidity image" class="details__img">
+          <div class="details__value" id="humidity">50%</div>
+          <div class="details__title">Humidity</div>
+        </section>
+
+        <article class="weather_details">
+          <img src="./images/wind_speed.png" alt="wind speed" class="details__img">
+          <div class="details__value" id="speed">10 km/h</div>
+          <div class="details__title">Wind Speed</div>
         </article>
-
-      <article class="weather__details none">
-          <section class="details">
-              <img src="./images/humidity.png" alt="" class="details__img">
-              <div class="details__value" id="humidity">50%</div>
-              <div class="details__title">Humidity</div>
-          </article>
-
-          <article class="details">
-              <img src="./images/wind_speed.png" alt="" class="details__img">
-              <div class="details__value" id="speed">10 km/h</div>
-              <div class="details__title">Wind Speed</div>
-          </section>
-        </article>
-        
-            <div class="article-five-day"> <!--Прогноз погоды на ближайшие 5 дней-->
-                <article id="forecastContainer">
-                  <h2 id="forecastTitle">Погода на 5 дней</h2>
-                  <h3 id="city">Grodno</h3>
-                  <div class="flex">
-                    <div class="flex-col">
-                      <span id="dayTitle1" class="col-head"></span>
-                      <img
-                        src="./images/cloud.png"
-                        id="weatherIcon1"
-                        class="weatherIcon"
-                      />
-                      <span class="temp-data">
-                        <span id="data1"></span>
-                        <span>Day 1<br/>80°F</span>
-                      </span>
-                    </div>
-                    <div class="flex-col">
-                      <span id="dayTitle2" class="col-head"></span>
-                      <img
-                        src="./images/snow_cloud.png"
-                        id="weatherIcon2"
-                        class="weatherIcon"
-                      />
-                      <div class="temp-data">
-                        <span id="data2"></span>
-                        <span>Day 2<br />82°F</span>
-                      </div>
-                    </div>
-                    <div class="flex-col">
-                      <span id="dayTitle3" class="col-head"></span>
-                      <img
-                        src="./images/cloud.png"
-                        id="weatherIcon3"
-                        class="weatherIcon"
-                      />
-                      <div class="temp-data">
-                        <span id="data3"></span>
-                        <span>Day 3<br />74°F</span>
-                      </div>
-                    </div>
-                    <div class="flex-col">
-                      <span id="dayTitle4" class="col-head"></span>
-                      <img
-                        src="./images/snow.png"
-                        id="weatherIcon4"
-                        class="weatherIcon"
-                      />
-                      <div class="temp-data">
-                        <span id="data4"></span>
-                        <span>Day 4<br />61°F</span>
-                      </div>
-                    </div>
-                    <div class="flex-col">
-                      <span id="dayTitle5" class="col-head"></span>
-                      <img
-                        src="./images/sunny.png"
-                        id="weatherIcon5"
-                        class="weatherIcon"
-                      />
-                      <div class="temp-data">
-                        <span id="data5"></span>
-                        <span>Day 5<br />68°F</span>
-                      </div>
-                    </div>
-                  </div>
-                </article>
-              </div>  
-        </article> 
-    <article> <!--Галерея изображений-->
+      </article>
 
     </article>
-    </main>
+    <!--Прогноз погоды на ближайшие 5 дней-->
 
-    <footer>
-        <ul class="bottom_menu"> 
-            <a href="rules.html" class="bottom_menu_link">Пользовательское соглашение</a>       
-            <a href="contact.html" class="bottom_menu_link">Обратная связь</a><br>
-            <h3>Создатель проекта - Вышникова Элизабетта</h3>
-        </ul> 
-    </footer>
+    <article class="greed">
+      <article id="forecastContainer">
+        <h2 id="forecastTitle">Погода на 5 дней</h2>
+        <section>
+          <div class="greed center">
+            <div class="flex-col">
+              <span id="dayTitle1" class="col-head"></span>
+              <img src="./images/cloud.png" id="weatherIcon1" class="weatherIcon" />
+              <span class="temp-data">
+                <span id="data1"></span>
+                <span>Day 1<br />80°F</span>
+              </span>
+            </div>
+            <div class="flex-col">
+              <span id="dayTitle2" class="col-head"></span>
+              <img src="./images/snow_cloud.png" id="weatherIcon2" class="weatherIcon" />
+              <div class="temp-data">
+                <span id="data2"></span>
+                <span>Day 2<br />82°F</span>
+              </div>
+            </div>
+            <div class="flex-col">
+              <span id="dayTitle3" class="col-head"></span>
+              <img src="./images/cloud.png" id="weatherIcon3" class="weatherIcon" />
+              <div class="temp-data">
+                <span id="data3"></span>
+                <span>Day 3<br />74°F</span>
+              </div>
+            </div>
+            <div class="flex-col">
+              <span id="dayTitle4" class="col-head"></span>
+              <img src="./images/snow.png" id="weatherIcon4" class="weatherIcon" />
+              <div class="temp-data">
+                <span id="data4"></span>
+                <span>Day 4<br />61°F</span>
+              </div>
+            </div>
+            <div class="flex-col">
+              <span id="dayTitle5" class="col-head"></span>
+              <img src="./images/sunny.png" id="weatherIcon5" class="weatherIcon" />
+              <div class="temp-data">
+                <span id="data5"></span>
+                <span>Day 5<br />68°F</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </article>
+    </article>
+    </article>
+    <article class="gallery"> <!--Галерея изображений-->
+      <h2 em>Галерея изображений</h2>
+      <p><img id="largeImg" src="./images/gallery/winter.jpg" alt="Large image" /></p>
+      <p class="thumbs">
+        <a href="./images/gallery/winter.jpg" title="Winter"><img src="./images/gallery/winter.jpg" /></a>
+        <a href="./images/gallery/spring.jpg" title="Spring"><img src="./images/gallery/spring.jpg" /></a>
+        <a href="./images/gallery/summer.jpg" title="Summer"><img src="./images/gallery/summer.jpg" /></a>
+        <a href="./images/gallery/autumn.jpg" title="Autumn"><img src="./images/gallery/autumn.jpg" /></a>
+      </p>
+    </article>
+  </main>
 
-<script src="weather_header.js"></script>  
+  <footer class="footer">
+    <nav class="menu">
+      <ul class="menu_list">
+        <a href="rules.html" class="menu_link">Пользовательское соглашение</a>
+        <a href="contact.html" class="menu_link">Обратная связь</a>
+        <p class="creator">Создатель проекта - Вышникова Элизабетта</p>
+      </ul>
+    </nav>
+  </footer>
+
+  <script src="weather_header.js"></script>
+  <script>type = "text/javascript" >/*Галерея изображений*/
+      $(function () {
+
+        $("h2").append('<em></em>');
+
+        $(".thumbs a").click(function () {
+
+          var largePath = $(this).attr("href");
+          var largeAlt = $(this).attr("title");
+
+          $("#largeImg").attr({ src: largePath, alt: largeAlt });
+
+          $("h2 em").html(" (" + largeAlt + ")");
+          return false;
+        });
+
+      });
+  </script>
 </body>
-</html>
 
+</html>

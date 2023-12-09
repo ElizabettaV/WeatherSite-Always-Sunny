@@ -1,42 +1,62 @@
 @import './reset.css';
-* {
-    min-width: 510px;
+
+/* Menu */
+.logo {
+  width: 70px;
+  height: 70px;
 }
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: rgba(50, 205, 50, 0.502)
-  }
-  
-a {
-    float: left;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-a:hover {
-    background-color: rgb(50, 205, 50);
-    
-  }
-div.creator{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: small;
-    color: rgb(125, 125, 125); 
-  }
+
+h1.logo_name {
+  color: #007991;
+  font: size 22px;
+  ;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  background-color: #32cd3280;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  background-color: #32cd3280;
+}
+
+nav.menu {
+  flex-grow: 1;
+}
+
+.menu>ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+a.menu_link {
+  float: left;
+  display: flexbox;
+  color: white;
+  text-align: center;
+  padding: 16px 16px;
+}
+
+a.menu_link:hover {
+  background-color: #32cd32;
+}
+
+/*  */
 
 h1 {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    
-   }
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
 
 h3 {
-    position: fixed;
-    font-family: Georgia, 'Times New Roman', Times, serif;    
-    font-size: small;
-    color: rgb(125, 125, 125);
-  }
+  position: fixed;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: small;
+  color: rgb(125, 125, 125);
+}

@@ -1,14 +1,49 @@
-@import './reset.css';* {
-  min-width: 510px;
+@import './reset.css';
+/* Menu */
+.logo {
+  width: 70px;
+  height: 70px;
 }
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: rgba(50, 205, 50, 0.502)
-  }
-  
+h1.logo_name{
+  color:#007991;
+  font: size 22px;;
+}
+.header {
+  display: flex;
+  align-items: center;
+  background-color: #32cd3280;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  background-color: #32cd3280;
+}
+
+nav.menu {
+  flex-grow: 1;
+}
+
+.menu>ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+a.menu_link {
+  float: left;
+  display: flexbox;
+  color: white;
+  text-align: center;
+  padding: 16px 16px;
+}
+
+a.menu_link:hover {
+  background-color: #32cd32;
+}
+
+/*  */
 a {
     float: left;
     display: block;

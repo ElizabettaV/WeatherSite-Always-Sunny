@@ -5,8 +5,8 @@ fetch(URL)
   .then((jsObject) => {
     console.log(jsObject);
 
-    document.getElementById("city").textContent = jsObject.name;
-    const descrip = jsObject.weather[0].description;
+    // document.getElementById("city").textContent = jsObject.name;
+    // const descrip = jsObject.weather[0].description;
 
     document.getElementById("current-desc").textContent = descrip;
 
