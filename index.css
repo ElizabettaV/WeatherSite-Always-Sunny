@@ -14,6 +14,7 @@ h1.logo_name{
 }
 .header {
   display: flex;
+  position: sticky;
   align-items: center;
   background-color: #32cd3280;
 }

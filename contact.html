@@ -30,14 +30,17 @@
     <main>
         <article>
             <h2>Связаться с разработчиком:</h2>
-            <a href="" class="link">e-mail: always_sunny@gmail.com</a> <!--заменить ссылку и текст-->
-        </article>
+            <a href="" class="link">e-mail: always_sunny@gmail.com</a>
     </main>
     <form action="" method="POST">
         <fieldset>
             <legend> Оставьте свой отзыв! </legend>
+            <label for="username">Имя</label>
+            <input type="text" id="username" name="username" required><br>
             <label for="feedback">Ваше сообщение</label>
             <input type="text" id="feedback" name="feedback" required><br>
+            <label for="e-mail">Электронная почта</label>
+            <input type="text" id="e-mail" name="e-mail" required><br>
             <input type="submit" value="Send">
         </fieldset>
     </form>

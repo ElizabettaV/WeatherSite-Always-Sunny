@@ -5,15 +5,13 @@
   width: 70px;
   height: 70px;
 }
-
-h1.logo_name {
-  color: #007991;
-  font: size 22px;
-  ;
+h1.logo_name{
+  color:#007991;
+  font: size 22px;;
 }
-
 .header {
   display: flex;
+  position: sticky;
   align-items: center;
   background-color: #32cd3280;
 }
@@ -46,7 +44,6 @@ a.menu_link {
 a.menu_link:hover {
   background-color: #32cd32;
 }
-
 /*  */
 
 h1 {
